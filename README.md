@@ -1,43 +1,168 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# AI CSS Styler
 
-## Getting Started
+AI CSS Styler is a project that allows users to input HTML code, receive CSS styling suggestions, and see a live preview of the changes. This tool aims to make it easy for users to experiment with styling and instantly view the results.
 
-First, run the development server:
+## Table of Contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- [Setup](https://www.notion.so/AI-CSS-Styler-11c94c6fe10f8037baf2f9c22d3150fe?pvs=21)
+- [Usage](https://www.notion.so/AI-CSS-Styler-11c94c6fe10f8037baf2f9c22d3150fe?pvs=21)
+- [Features](https://www.notion.so/AI-CSS-Styler-11c94c6fe10f8037baf2f9c22d3150fe?pvs=21)
+- [Contributing](https://www.notion.so/AI-CSS-Styler-11c94c6fe10f8037baf2f9c22d3150fe?pvs=21)
+- [License](https://www.notion.so/AI-CSS-Styler-11c94c6fe10f8037baf2f9c22d3150fe?pvs=21)
+- [Contact](https://www.notion.so/AI-CSS-Styler-11c94c6fe10f8037baf2f9c22d3150fe?pvs=21)
+- [Examples and Use Cases](https://www.notion.so/AI-CSS-Styler-11c94c6fe10f8037baf2f9c22d3150fe?pvs=21)
+- [Feature Wishlist](https://www.notion.so/AI-CSS-Styler-11c94c6fe10f8037baf2f9c22d3150fe?pvs=21)
+
+## Setup
+
+### Prerequisites
+
+- Node.js installed on your machine:
+    - Make sure to use 18, you can do that using `use nvm 18`
+- NPM (Node Package Manager) or Yarn
+    - Run `npm --version` to check the version
+- A web browser for live preview
+
+### Installation
+
+1. Clone the repository:
+    
+    ```bash
+    git clone https://github.com/0xmetaschool/code-styler.git
+    ```
+    
+2. Navigate to the project directory:
+    
+    ```bash
+    cd code-styler
+    ```
+    
+3. Install dependencies:
+    
+    ```bash
+    npm install
+    ```
+    
+4. Run the development server:
+    
+    ```bash
+    npm run dev
+    ```
+    
+
+### Configuration
+
+1. Create a `.env` file in the root directory with the following environment variables:
+    
+    ```
+    OPENAI_API_KEY=
+    ```
+    
+2. Configure additional settings such as API keys for advanced AI functionalities (optional).
+
+### Verification
+
+To verify the setup:
+
+1. Open the browser and go to `http://localhost:3000`.
+2. Ensure the CSS Styler is loading and the live preview works as expected.
+
+## Usage
+
+### Basic Usage
+
+Input your HTML code using the provided editor. AI CSS Styler will automatically suggest CSS styling changes. You can edit the CSS and see the changes in real time on the preview pane.
+
+```html
+<!-- Example HTML code -->
+<div class="header">Hello World</div>
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### API Integration
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+AI CSS Styler uses OpenAI's API to suggest CSS changes. Make sure you have the OpenAI API key set up in your environment variables.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Features
 
-> First line
-> Another line
->
-> > Nested line
->
-> Last line
+- Live HTML and CSS editor with instant preview
+- AI-powered CSS suggestions for styling
+- Customizable layout and theme options
+- Responsive design previews
 
-## Learn More
+## License
 
-To learn more about Next.js, take a look at the following resources:
+This project is licensed under the MIT License - see the [LICENSE file](https://github.com/0xmetaschool/code-styler/blob/main/LICENSE) for details.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contact
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+For support or queries, please join [our discord server](https://discord.gg/vbVMUwXWgc) and ask all relevant questions there.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Examples and Use Case
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Basic Example
+
+```html
+<div class="box">Styled by AI</div>
+```
+
+The AI suggests adding the following CSS:
+
+```css
+.box {
+  background-color: lightblue;
+  padding: 20px;
+  border-radius: 10px;
+}
+```
+
+### Advanced Use Case
+
+Styling a responsive navigation bar:
+
+```html
+<nav class="navbar">Home | About | Contact</nav>
+```
+
+AI CSS Styler suggests this responsive CSS:
+
+```css
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+```
+
+### Edge Case Handling
+
+Handling empty HTML elements or invalid CSS properties:
+
+```html
+<!-- Empty element -->
+<div class="empty"></div>
+```
+
+```css
+.empty {
+  /* AI will suggest removing the empty class or adding a placeholder style */
+}
+```
+
+## Feature Wishlist
+
+- AI-generated media queries for responsive design
+- Integration with popular CSS frameworks (e.g., Bootstrap, Tailwind)
+- Advanced customization options for AI-generated suggestions
+
+We encourage community discussion and contributions to these potential features!
