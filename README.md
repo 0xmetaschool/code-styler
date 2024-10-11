@@ -80,7 +80,7 @@ AI CSS Styler uses OpenAI's API to suggest CSS changes. Make sure you have the O
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE file](https://choosealicense.com/licenses/mit/) for details.
+This project is licensed under the MIT License - see the [LICENSE file](https://github.com/0xmetaschool/code-styler/blob/main/LICENSE) for details.
 
 ## Contact
 
