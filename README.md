@@ -1,17 +1,6 @@
 # AI CSS Styler
 
-AI CSS Styler is a project that allows users to input HTML code, receive CSS styling suggestions, and see a live preview of the changes. This tool aims to make it easy for users to experiment with styling and instantly view the results.
-
-## Table of Contents
-
-- [Setup](https://www.notion.so/AI-CSS-Styler-11c94c6fe10f8037baf2f9c22d3150fe?pvs=21)
-- [Usage](https://www.notion.so/AI-CSS-Styler-11c94c6fe10f8037baf2f9c22d3150fe?pvs=21)
-- [Features](https://www.notion.so/AI-CSS-Styler-11c94c6fe10f8037baf2f9c22d3150fe?pvs=21)
-- [Contributing](https://www.notion.so/AI-CSS-Styler-11c94c6fe10f8037baf2f9c22d3150fe?pvs=21)
-- [License](https://www.notion.so/AI-CSS-Styler-11c94c6fe10f8037baf2f9c22d3150fe?pvs=21)
-- [Contact](https://www.notion.so/AI-CSS-Styler-11c94c6fe10f8037baf2f9c22d3150fe?pvs=21)
-- [Examples and Use Cases](https://www.notion.so/AI-CSS-Styler-11c94c6fe10f8037baf2f9c22d3150fe?pvs=21)
-- [Feature Wishlist](https://www.notion.so/AI-CSS-Styler-11c94c6fe10f8037baf2f9c22d3150fe?pvs=21)
+AI CSS Styler is a project that allows users to input HTML code, receive CSS styling suggestions, and see a live preview of the changes. This tool aims to make it easy for users to experiment with styling and instantly view the results. This tool was built using Next.js and OpenAI.
 
 ## Setup
 
@@ -52,13 +41,14 @@ AI CSS Styler is a project that allows users to input HTML code, receive CSS sty
 
 ### Configuration
 
-1. Create your OpenAI API key. You can find the steps in [this](https://metaschool.so/articles/openai-api-key/) article.
-2. Create a `.env` file in the root directory with the following environment variable:
+1. Create a `.env` file in the root directory with the following environment variables:
     
     ```
     OPENAI_API_KEY=
     ```
     
+2. Configure additional settings such as API keys for advanced AI functionalities (optional).
+
 ### Verification
 
 To verify the setup:
@@ -90,7 +80,7 @@ AI CSS Styler uses OpenAI's API to suggest CSS changes. Make sure you have the O
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE file](https://github.com/0xmetaschool/code-styler/blob/main/LICENSE) for details.
+This project is licensed under the MIT License - see the [LICENSE file](https://choosealicense.com/licenses/mit/) for details.
 
 ## Contact
 
@@ -161,7 +151,7 @@ Handling empty HTML elements or invalid CSS properties:
 ## Feature Wishlist
 
 - AI-generated media queries for responsive design
-- Integration with popular CSS frameworks (e.g., Bootstrap, Tailwind)
+- Option to generate the HTML based on prompts
 - Advanced customization options for AI-generated suggestions
 
 We encourage community discussion and contributions to these potential features!
