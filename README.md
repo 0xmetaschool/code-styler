@@ -52,14 +52,13 @@ AI CSS Styler is a project that allows users to input HTML code, receive CSS sty
 
 ### Configuration
 
-1. Create a `.env` file in the root directory with the following environment variables:
+1. Create your OpenAI API key. You can find the steps in [this](https://metaschool.so/articles/openai-api-key/) article.
+2. Create a `.env` file in the root directory with the following environment variable:
     
     ```
     OPENAI_API_KEY=
     ```
     
-2. Configure additional settings such as API keys for advanced AI functionalities (optional).
-
 ### Verification
 
 To verify the setup:
