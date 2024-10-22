@@ -1,157 +1,109 @@
-# AI CSS Styler
+# CSSGeneratorGPT
 
-AI CSS Styler is a project that allows users to input HTML code, receive CSS styling suggestions, and see a live preview of the changes. This tool aims to make it easy for users to experiment with styling and instantly view the results. This tool was built using Next.js and OpenAI.
+An AI tool that takes HTML as an input to generate responsive CSS with a real-time preview for instant interaction.
 
-## Setup
+## Table of Content
 
-### Prerequisites
+- [Live Demo](#live-demo)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [How to run the project](#how-to-run-the-project)
+- [Screenshots](#screenshots)
+- [How to use the application](#how-to-use-the-application)
+- [Use cases and similar project ideas](#use-cases-and-similar-project-ideas)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
+- [Contact](#contact)
 
-- Node.js installed on your machine:
-    - Make sure to use 18, you can do that using `use nvm 18`
-- NPM (Node Package Manager) or Yarn
-    - Run `npm --version` to check the version
-- A web browser for live preview
+## Live Demo
 
-### Installation
-
-1. Clone the repository:
-    
-    ```bash
-    git clone https://github.com/0xmetaschool/code-styler.git
-    ```
-    
-2. Navigate to the project directory:
-    
-    ```bash
-    cd code-styler
-    ```
-    
-3. Install dependencies:
-    
-    ```bash
-    npm install
-    ```
-    
-4. Run the development server:
-    
-    ```bash
-    npm run dev
-    ```
-    
-
-### Configuration
-
-1. Create a `.env` file in the root directory with the following environment variables:
-    
-    ```
-    OPENAI_API_KEY=
-    ```
-    
-2. Configure additional settings such as API keys for advanced AI functionalities (optional).
-
-### Verification
-
-To verify the setup:
-
-1. Open the browser and go to `http://localhost:3000`.
-2. Ensure the CSS Styler is loading and the live preview works as expected.
-
-## Usage
-
-### Basic Usage
-
-Input your HTML code using the provided editor. AI CSS Styler will automatically suggest CSS styling changes. You can edit the CSS and see the changes in real time on the preview pane.
-
-```html
-<!-- Example HTML code -->
-<div class="header">Hello World</div>
-```
-
-### API Integration
-
-AI CSS Styler uses OpenAI's API to suggest CSS changes. Make sure you have the OpenAI API key set up in your environment variables.
+[https://css-code-styler.vercel.app/](https://css-code-styler.vercel.app/)
 
 ## Features
 
-- Live HTML and CSS editor with instant preview
-- AI-powered CSS suggestions for styling
-- Customizable layout and theme options
-- Responsive design previews
+- AI Powered CSS style generator
+- Custom commands to generate according to UI preference
+
+## Technologies Used
+
+- Tailwind CSS and Chakra UI
+- Next.js
+- AI Integration: OpenAI's GPT-4
+
+## Getting Started
+
+### Prerequisites
+
+- Next.js
+- OpenAI API key
+
+### How to run the project
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/0xmetaschool/code-styler
+cd code-styler
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Set up environment variables:
+
+Create a `.env.local` file in the root directory and add the following variables:
+
+```
+OPENAI_API_KEY=your_openai_api_key
+```
+
+4. Run the development server:
+
+```bash
+npm run dev
+```
+
+5. Open your browser and navigate to `http://localhost:3000`
+
+You should now see the CSSGeneratorGPT running with Next.js.
+
+## Screenshots
+
+![Screenshot 1](https://github.com/AkshataM17/css-code-styler/blob/main/public/Screenshot%20(113).png?raw=true)
+![Screenshot 2](https://github.com/AkshataM17/css-code-styler/blob/main/public/Screenshot%20(109).png?raw=true)
+![Screenshot 3](https://github.com/AkshataM17/css-code-styler/blob/main/public/Screenshot%20(112).png?raw=true)
+
+
+## How to use the application
+
+1. Paste your raw HTML code in 'Input HTML field'
+2. In the field, design description, add what kind of design you prefer
+
+## Contributing
+
+We love contributions! Here's how you can help make the CSSGeneratorGPT even better:
+
+1. Fork the project (`gh repo fork https://github.com/0xmetaschool/code-styler`)
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE file](https://github.com/0xmetaschool/code-styler/blob/main/LICENSE) for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/0xmetaschool/code-styler/blob/main/LICENSE) file for details.
+
+## Acknowledgments
+
+- OpenAI for providing the GPT-4 API
+- The Chakra UI and Tailwind CSS team for their excellent React component library
 
 ## Contact
 
-For support or queries, please join [our discord server](https://discord.gg/vbVMUwXWgc) and ask all relevant questions there.
-
----
-
-## Examples and Use Case
-
-### Basic Example
-
-```html
-<div class="box">Styled by AI</div>
-```
-
-The AI suggests adding the following CSS:
-
-```css
-.box {
-  background-color: lightblue;
-  padding: 20px;
-  border-radius: 10px;
-}
-```
-
-### Advanced Use Case
-
-Styling a responsive navigation bar:
-
-```html
-<nav class="navbar">Home | About | Contact</nav>
-```
-
-AI CSS Styler suggests this responsive CSS:
-
-```css
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-  background-color: #333;
-  color: white;
-}
-
-@media (max-width: 600px) {
-  .navbar {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-```
-
-### Edge Case Handling
-
-Handling empty HTML elements or invalid CSS properties:
-
-```html
-<!-- Empty element -->
-<div class="empty"></div>
-```
-
-```css
-.empty {
-  /* AI will suggest removing the empty class or adding a placeholder style */
-}
-```
-
-## Feature Wishlist
-
-- AI-generated media queries for responsive design
-- Option to generate the HTML based on prompts
-- Advanced customization options for AI-generated suggestions
-
-We encourage community discussion and contributions to these potential features!
+Please open an issue in the GitHub repository for any queries or support.
