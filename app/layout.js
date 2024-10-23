@@ -1,14 +1,20 @@
-import './globals.css'
-
-export const metadata = {
-  title: 'AI Code Styler',
-  description: 'Enhance your HTML with AI-generated CSS',
-}
+import './globals.css' 
+import { ChakraProvider } from '@chakra-ui/react'
+import Footer from './components/Footer'
+import Header from './components/Header'
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <ChakraProvider>
+          <Header />
+          <main>
+            {children}
+          </main>
+          <Footer />
+        </ChakraProvider>
+      </body>
     </html>
   )
 }
